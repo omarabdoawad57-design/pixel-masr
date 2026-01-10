@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Pixel Masr</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script src="auth.js"></script>
+<script>checkLogin()</script>
+
+<header>
+<h2>🎬 Pixel Masr</h2>
+<div id="user"></div>
+</header>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://i.imgur.com/8UG2G6M.jpg">
+<h3>فيلم أكشن</h3>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<button onclick="openMovie()">مشاهدة</button>
+</div>
+
+<div class="card">
+<img src="https://i.imgur.com/jQ9XGxT.jpg">
+<h3>أنمي أسطوري</h3>
+<p class="rating">⭐⭐⭐⭐⭐</p>
+<button onclick="openMovie()">مشاهدة</button>
+</div>
+
+</div>
+
+<script>
+document.getElementById("user").innerHTML =
+"👤 "+localStorage.getItem("logged")+
+" | <a href='#' onclick='logout()' style='color:red'>خروج</a>";
+
+function openMovie(){
+  let v = localStorage.getItem("views") || 0;
+  localStorage.setItem("views", ++v);
+  location.href="movie.html";
+}
+</script>
+
+</body>
+</html>
