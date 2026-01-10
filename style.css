@@ -1,8 +1,0 @@
-body{background:#000;color:#fff;font-family:Arial}
-.nav{display:flex;justify-content:space-between;padding:15px;background:#000}
-.logo{color:#e50914;font-size:26px}
-.hero{height:80vh;background-size:cover}
-.hero-content{padding:60px}
-.card img{width:180px;border-radius:8px;cursor:pointer}
-iframe{width:100%;height:90vh;border:none}
-button{padding:10px;margin:5px}
