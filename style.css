@@ -1,0 +1,52 @@
+body {
+  background: radial-gradient(circle, #0a0a0a, #000);
+  color: #fff;
+  font-family: Arial;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(90deg, #7f00ff, #e100ff);
+}
+
+.chat-box {
+  height: 60vh;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+.user { color: #00ffea; }
+.ai { color: #ff4dff; }
+
+.input-box {
+  display: flex;
+  padding: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+}
+
+button {
+  margin-left: 10px;
+  padding: 12px 20px;
+  background: #ff00ff;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+}
