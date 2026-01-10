@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="details"></div>
+
+<script src="data.js"></script>
+<script>
+const id=new URLSearchParams(location.search).get("id");
+const c=content.find(x=>x.id==id);
+
+let html=`
+<h1>${c.title}</h1>
+<p>${c.description}</p>
+<p>⭐ ${c.rating} | 👁 ${c.views}</p>`;
+
+c.seasons.forEach(s=>{
+html+=`<h3>Season ${s.season}</h3>`;
+s.episodes.forEach(e=>{
+html+=`<button onclick="watch('${e.link}')">Episode ${e.ep}</button>`;
+});
+});
+
+document.getElementById("details").innerHTML=html;
+
+function watch(link){
+location.href=`watch.html?src=${encodeURIComponent(link)}`;
+}
+</script>
+</body>
+</html>
